@@ -1,31 +1,33 @@
 {
-    "name": "dify",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "lint:ts": "eslint",
-        "lint:ts & fix": "eslint --fix",
-        "commit": "git-cz",
-        "prepare": "husky"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@commitlint/cli": "^20.1.0",
-        "@commitlint/config-conventional": "^20.0.0",
-        "eslint": "^9.39.1",
-        "commitizen": "^4.3.1",
-        "cspell": "^9.3.0",
-        "cz-git": "^1.12.0",
-        "eslint-plugin-prettier": "^5.5.4",
-        "eslint-plugin-react-hooks": "^7.0.1",
-        "eslint-plugin-react-refresh": "^0.4.24",
-        "eslint-plugin-simple-import-sort": "^12.1.1",
-        "globals": "^16.5.0",
-        "husky": "^9.1.7",
-        "typescript-eslint": "^8.46.3"
-    },
-    "dependencies": {}
+  "name": "dify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:ts": "eslint",
+    "lint:ts & fix": "eslint --fix",
+    "commit": "git-cz",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "commitizen": "^4.3.1",
+    "cspell": "^9.3.0",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "typescript-eslint": "^8.46.3"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^16.0.3"
+  }
 }

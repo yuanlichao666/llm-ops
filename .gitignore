@@ -15,6 +15,7 @@ dist
 build
 dist-ssr
 *.local
+.next
 
 # Editor directories and files
 .vscode/*

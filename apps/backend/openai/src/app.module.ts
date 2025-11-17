@@ -2,18 +2,10 @@ import { Module } from '@nestjs/common'
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { LLMFactory } from './llm.openai'
-
-const LLMProvider = {
-  provide: 'LLMModel',
-  useFactory: async () => {
-    return await LLMFactory()
-  },
-}
 
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService, LLMProvider],
+  providers: [AppService],
 })
 export class AppModule {}
