@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:ts": "eslint",
-    "lint:ts & fix": "eslint --fix",
+    "lint:ts": "eslint --fix",
     "commit": "git-cz",
     "prepare": "husky"
   },
