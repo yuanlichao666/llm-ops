@@ -17,13 +17,13 @@ import { Readable } from 'stream'
  * @see https://rxjs.dev/api/index/function/fromEvent
  */
 export function StreamToObservable(stream: Readable): Observable<any> {
-  return new Observable(subscriber => {
-    stream.on('data', data => subscriber.next(data))
-    stream.on('error', err => subscriber.error(err))
-    stream.on('end', () => subscriber.complete())
+    return new Observable(subscriber => {
+        stream.on('data', data => subscriber.next(data))
+        stream.on('error', err => subscriber.error(err))
+        stream.on('end', () => subscriber.complete())
 
-    return () => stream.destroy() // 断开 SSE 时自动清理
-  })
+        return () => stream.destroy() // 断开 SSE 时自动清理
+    })
 }
 
 /**
@@ -42,9 +42,9 @@ export function StreamToObservable(stream: Readable): Observable<any> {
  * @see https://rxjs.dev/api/index/function/fromEvent
  */
 export function AsyncIteratorToObservable<T>(
-  iterator: AsyncIterable<T>
+    iterator: AsyncIterable<T>
 ): Observable<T> {
-  return from(iterator)
+    return from(iterator)
 }
 
 /**
@@ -63,25 +63,25 @@ export function AsyncIteratorToObservable<T>(
  * @see https://rxjs.dev/api/index/function/fromEvent
  */
 export function ReadableStreamToObservable<T>(
-  webStream: ReadableStream<T>
+    webStream: ReadableStream<T>
 ): Observable<T> {
-  const reader = webStream.getReader()
+    const reader = webStream.getReader()
 
-  return new Observable<T>(subscriber => {
-    async function read() {
-      try {
-        while (true) {
-          const { done, value } = await reader.read()
-          if (done) break
-          subscriber.next(value)
+    return new Observable<T>(subscriber => {
+        async function read() {
+            try {
+                while (true) {
+                    const { done, value } = await reader.read()
+                    if (done) break
+                    subscriber.next(value)
+                }
+                subscriber.complete()
+            } catch (e) {
+                subscriber.error(e)
+            }
         }
-        subscriber.complete()
-      } catch (e) {
-        subscriber.error(e)
-      }
-    }
-    read()
+        read()
 
-    return () => reader.cancel()
-  })
+        return () => reader.cancel()
+    })
 }

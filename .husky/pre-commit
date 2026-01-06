@@ -1,1 +1,1 @@
-pnpm lint:ts
+pnpm lint-staged
