@@ -52,5 +52,11 @@
         "*.md": [
             "prettier --write"
         ]
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "bcrypt",
+            "sharp"
+        ]
     }
 }

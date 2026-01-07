@@ -27,11 +27,5 @@
         "@types/node": "22.10.7",
         "@types/react": "latest",
         "@types/react-dom": "latest"
-    },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "bcrypt",
-            "sharp"
-        ]
     }
 }
