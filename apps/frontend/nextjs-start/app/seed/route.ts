@@ -116,3 +116,5 @@ export async function GET() {
         return Response.json({ error }, { status: 500 })
     }
 }
+
+export const dynamic = 'force-dynamic'
