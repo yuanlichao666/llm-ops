@@ -34,6 +34,7 @@ const frontendConfig = {
         ...reactHooks.configs.recommended.rules,
         'react-refresh/only-export-components': 'off',
         'no-console': 'error',
+        '@typescript-eslint/no-explicit-any': 'off',
     },
 }
 

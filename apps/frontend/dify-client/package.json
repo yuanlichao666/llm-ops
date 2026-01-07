@@ -9,14 +9,14 @@
     },
     "dependencies": {
         "next": "16.1.1",
-        "react": "19.2.3",
-        "react-dom": "19.2.3",
+        "react": "latest",
+        "react-dom": "latest",
         "@workspace/ui": "workspace:*"
     },
     "devDependencies": {
         "@types/node": "^20",
-        "@types/react": "^19.2.7",
-        "@types/react-dom": "^19.2.3",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
         "typescript": "^5"
     }
 }
