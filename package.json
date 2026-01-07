@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint:ts": "eslint --fix",
+        "lint": "eslint --fix",
         "commit": "git-cz",
         "prepare": "husky"
     },
@@ -25,6 +25,9 @@
         "globals": "^16.5.0",
         "husky": "^9.1.7",
         "lint-staged": "^16.2.7",
+        "prettier": "^3.7.4",
+        "stylelint": "^16.26.1",
+        "stylelint-config-standard": "^39.0.1",
         "typescript-eslint": "^8.46.3"
     },
     "dependencies": {
@@ -32,28 +35,22 @@
     },
     "lint-staged": {
         "*.ts": [
-            "eslint --fix",
-            "git add"
+            "eslint --fix --max-warnings=0"
         ],
         "*.tsx": [
-            "eslint --fix",
-            "git add"
+            "eslint --fix --max-warnings=0"
         ],
         "*.css": [
-            "stylelint --fix",
-            "git add"
+            "stylelint --fix"
         ],
         "*.scss": [
-            "stylelint --fix",
-            "git add"
+            "stylelint --fix"
         ],
         "*.less": [
-            "stylelint --fix",
-            "git add"
+            "stylelint --fix"
         ],
         "*.md": [
-            "prettier --write",
-            "git add"
+            "prettier --write"
         ]
     }
 }
