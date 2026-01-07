@@ -16,9 +16,11 @@ export interface Neo4jRuntime {
     run: Transaction['run']
 }
 
-export class TransactionalAdapterNeo4j
-    implements TransactionalAdapter<Driver, Neo4jRuntime, TransactionConfig>
-{
+export class TransactionalAdapterNeo4j implements TransactionalAdapter<
+    Driver,
+    Neo4jRuntime,
+    TransactionConfig
+> {
     // 注入 Driver 的 Token
     connectionToken: any
     defaultTxOptions?: Partial<TransactionConfig>
