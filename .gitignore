@@ -38,3 +38,5 @@ dist-ssr
 .devcontainer/postgresql_data
 
 config.yaml
+
+.env*
